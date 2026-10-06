@@ -1,0 +1,60 @@
+{
+  "departure_date": {
+    "precision": 0.6,
+    "recall": 1.0,
+    "f1-score": 0.7499999999999999,
+    "support": 15,
+    "confused_with": {}
+  },
+  "return_date": {
+    "precision": 1.0,
+    "recall": 0.3333333333333333,
+    "f1-score": 0.5,
+    "support": 15,
+    "confused_with": {
+      "departure_date": 10
+    }
+  },
+  "origin": {
+    "precision": 0.75,
+    "recall": 1.0,
+    "f1-score": 0.8571428571428571,
+    "support": 3,
+    "confused_with": {}
+  },
+  "budget": {
+    "precision": 1.0,
+    "recall": 0.6666666666666666,
+    "f1-score": 0.8,
+    "support": 3,
+    "confused_with": {}
+  },
+  "destination": {
+    "precision": 1.0,
+    "recall": 0.6666666666666666,
+    "f1-score": 0.8,
+    "support": 3,
+    "confused_with": {
+      "origin": 1
+    }
+  },
+  "micro avg": {
+    "precision": 0.7105263157894737,
+    "recall": 0.6923076923076923,
+    "f1-score": 0.7012987012987013,
+    "support": 39
+  },
+  "macro avg": {
+    "precision": 0.8699999999999999,
+    "recall": 0.7333333333333332,
+    "f1-score": 0.7414285714285714,
+    "support": 39
+  },
+  "weighted avg": {
+    "precision": 0.8269230769230769,
+    "recall": 0.6923076923076923,
+    "f1-score": 0.6697802197802196,
+    "support": 39
+  },
+  "accuracy": 0.958904109589041
+}

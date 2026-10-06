@@ -1,0 +1,10 @@
+[
+  {
+    "text": "Let me compare ways of getting there",
+    "intent": "show_transport",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.287802517414093
+    }
+  }
+]

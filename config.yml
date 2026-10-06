@@ -13,6 +13,12 @@ pipeline:
   - name: RegexFeaturizer
 
   - name: LexicalSyntacticFeaturizer
+    features:
+      - ["low", "title", "upper", "prefix5", "suffix3"]
+      - ["low", "title", "upper", "prefix5", "suffix3"]
+      - ["BOS", "EOS", "low", "upper", "title", "digit", "prefix5", "suffix3"]
+      - ["low", "title", "upper", "prefix5", "suffix3"]
+      - ["low", "title", "upper", "prefix5", "suffix3"]
 
   - name: CountVectorsFeaturizer
 

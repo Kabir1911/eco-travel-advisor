@@ -62,10 +62,10 @@ mkdir models
 If it already exists, continue. Run the following as one command:
 
 ```bat
-docker run --rm -v "%cd%/config.yml:/app/config.yml:ro" -v "%cd%/domain.yml:/app/domain.yml:ro" -v "%cd%/data:/app/data:ro" -v "%cd%/models:/app/models" rasa/rasa:3.6.21-spacy-en train --fixed-model-name eco-api-features
+docker run --rm -v "%cd%/config.yml:/app/config.yml:ro" -v "%cd%/domain.yml:/app/domain.yml:ro" -v "%cd%/data:/app/data:ro" -v "%cd%/models:/app/models" rasa/rasa:3.6.21-spacy-en train --fixed-model-name eco-entity-context
 ```
 
-Wait for successful training and confirm `models/eco-api-features.tar.gz` exists. Retraining can produce different evaluation results; the committed results describe the tested model used during development.
+Wait for successful training and confirm `models/eco-entity-context.tar.gz` exists. Retraining can produce different evaluation results; the committed results describe the tested model used during development.
 
 ### 4. Start
 
@@ -130,16 +130,26 @@ Recorded final development results, 6 October 2026:
 
 | Measure | Result |
 |---|---:|
-| Intent accuracy | 34/36 (94.44%) |
-| Intent macro F1 | 0.9583 |
-| DIET entity macro F1 | 0.6933 |
-| DIET entity micro F1 | 0.5974 |
-| DIET entity weighted F1 | 0.4718 |
+| Intent accuracy | 35/36 (97.22%) |
+| Intent macro F1 | 0.9833 |
+| DIET entity macro F1 | 1.0000 |
+| DIET entity micro F1 | 1.0000 |
+| DIET entity weighted F1 | 1.0000 |
 | Correct dialogue action predictions | 57/57 |
-| Test conversations passed | 10/10 |
-| Conversations with warnings | 0 |
+| Dialogue action F1 | 1.0000 |
 
-Final evidence: `results/core_final_ui` and `results/nlu_final_ui`. Earlier folders refer to earlier development stages.
+These results belong to `eco-entity-context.tar.gz`.
+NLU evidence is in `results/nlu_entity_context`; dialogue evidence
+is in `results/core_entity_context`.
+
+The 36-example NLU set was repeatedly used to guide development,
+so it is a development evaluation set, not an untouched held-out test.
+These scores do not establish performance on unseen conversations.
+Core tests evaluate action selection from supplied intents; they do
+not independently verify live API responses or custom-action execution.
+Earlier evaluation folders are retained for comparison.
+
+Final evidence: `results/core_entity_context` and `results/nlu_entity_context`. Earlier folders, including `core_final_ui` and `nlu_final_ui`, contain results from previous model versions.
 
 Intent and entity confusion matrices are `intent_confusion_matrix.png` and `DIETClassifier_confusion_matrix.png`. JSON reports and error files are stored alongside them.
 
@@ -152,11 +162,11 @@ Two transport requests were confused with weather or destination requests. DIET 
 Create a results folder if absent. Run each command on one line:
 
 ```bat
-docker run --rm -v "%cd%/models:/app/models:ro" -v "%cd%/tests:/app/tests:ro" -v "%cd%/results:/app/results" rasa/rasa:3.6.21-spacy-en test core --model /app/models/eco-api-features.tar.gz --stories /app/tests/test_stories.yml --out /app/results/core_recheck --successes
+docker run --rm -v "%cd%/models:/app/models:ro" -v "%cd%/tests:/app/tests:ro" -v "%cd%/results:/app/results" rasa/rasa:3.6.21-spacy-en test core --model /app/models/eco-entity-context.tar.gz --stories /app/tests/test_stories.yml --out /app/results/core_recheck --successes
 ```
 
 ```bat
-docker run --rm -v "%cd%/models:/app/models:ro" -v "%cd%/domain.yml:/app/domain.yml:ro" -v "%cd%/tests:/app/tests:ro" -v "%cd%/results:/app/results" rasa/rasa:3.6.21-spacy-en test nlu --model /app/models/eco-api-features.tar.gz --nlu /app/tests/test_nlu.yml --out /app/results/nlu_recheck
+docker run --rm -v "%cd%/models:/app/models:ro" -v "%cd%/domain.yml:/app/domain.yml:ro" -v "%cd%/tests:/app/tests:ro" -v "%cd%/results:/app/results" rasa/rasa:3.6.21-spacy-en test nlu --model /app/models/eco-entity-context.tar.gz --nlu /app/tests/test_nlu.yml --out /app/results/nlu_recheck
 ```
 
 ## Data and limitations

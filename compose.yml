@@ -21,7 +21,7 @@ services:
       - --port
       - "5005"
       - --model
-      - /app/models/eco-api-features.tar.gz
+      - /app/models/eco-entity-context.tar.gz
       - --credentials
       - /app/credentials.yml
       - --endpoints

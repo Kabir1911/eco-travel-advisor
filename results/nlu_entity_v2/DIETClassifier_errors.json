@@ -1,0 +1,135 @@
+[
+  {
+    "text": "My holiday runs from 2026-11-12 to 2026-11-18",
+    "entities": [
+      {
+        "start": 21,
+        "end": 31,
+        "value": "2026-11-12",
+        "entity": "departure_date"
+      },
+      {
+        "start": 35,
+        "end": 45,
+        "value": "2026-11-18",
+        "entity": "return_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "return_date",
+        "start": 21,
+        "end": 31,
+        "confidence_entity": 0.33039945363998413,
+        "value": "2026-11-12",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "return_date",
+        "start": 35,
+        "end": 45,
+        "confidence_entity": 0.4341169595718384,
+        "value": "2026-11-18",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I am travelling from 2026-12-03 to 2026-12-09",
+    "entities": [
+      {
+        "start": 21,
+        "end": 31,
+        "value": "2026-12-03",
+        "entity": "departure_date"
+      },
+      {
+        "start": 35,
+        "end": 45,
+        "value": "2026-12-09",
+        "entity": "return_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "departure_date",
+        "start": 21,
+        "end": 31,
+        "confidence_entity": 0.32294201850891113,
+        "value": "2026-12-03",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "departure_date",
+        "start": 35,
+        "end": 45,
+        "confidence_entity": 0.3475688695907593,
+        "value": "2026-12-09",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Please use the dates from 2027-01-14 to 2027-01-20",
+    "entities": [
+      {
+        "start": 26,
+        "end": 36,
+        "value": "2027-01-14",
+        "entity": "departure_date"
+      },
+      {
+        "start": 40,
+        "end": 50,
+        "value": "2027-01-20",
+        "entity": "return_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "departure_date",
+        "start": 26,
+        "end": 36,
+        "confidence_entity": 0.5249850153923035,
+        "value": "2027-01-14",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "departure_date",
+        "start": 40,
+        "end": 50,
+        "confidence_entity": 0.5237337946891785,
+        "value": "2027-01-20",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Calculate train emissions for 275 km",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "budget",
+        "start": 30,
+        "end": 33,
+        "confidence_entity": 0.7488248944282532,
+        "value": "275",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Train emissions for 620 km",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "budget",
+        "start": 20,
+        "end": 23,
+        "confidence_entity": 0.9878201484680176,
+        "value": "620",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

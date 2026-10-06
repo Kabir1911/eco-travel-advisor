@@ -120,6 +120,10 @@ nlu:
     - The city I want to visit is [Paris](destination)
     - I have picked [Rome](destination) as my holiday destination
     - My trip will end in [Amsterdam](destination)
+    - I would enjoy a vacation in [Rome](destination)
+    - We want to spend our break in [Berlin](destination)
+    - I am visiting [Paris](destination) for my holiday
+    - Our chosen holiday location is [Amsterdam](destination)
 
 - intent: inform_travel_dates
   examples: |
@@ -132,6 +136,30 @@ nlu:
     - My departure date is [2027-03-01](departure_date)
     - I return on [2026-12-22](return_date)
     - My return date is [2027-03-08](return_date)
+    - My holiday starts on [2027-04-06](departure_date) and ends on [2027-04-13](return_date)
+    - I am away from [2027-05-02](departure_date) to [2027-05-09](return_date)
+    - The trip is from [2027-06-11](departure_date) to [2027-06-19](return_date)
+    - Please plan my stay from [2027-07-03](departure_date) to [2027-07-10](return_date)
+    - My travel period is from [2027-08-14](departure_date) to [2027-08-21](return_date)
+    - I depart on [2027-09-05](departure_date) and come back on [2027-09-12](return_date)
+    - Departure is [2027-10-08](departure_date), return is [2027-10-16](return_date)
+    - I will leave on [2027-11-04](departure_date) and return on [2027-11-11](return_date)
+    - Coming back on [2027-04-13](return_date)
+    - My journey home is on [2027-05-09](return_date)
+    - The return journey is scheduled for [2027-06-19](return_date)
+    - I will be back on [2027-07-10](return_date)
+    - Setting off on [2027-08-14](departure_date)
+    - My outbound journey is on [2027-09-05](departure_date)
+    - I start travelling on [2027-10-08](departure_date)
+    - My leaving date is [2027-11-04](departure_date)
+    - Our holiday is booked from [2027-04-10](departure_date) to [2027-04-17](return_date)
+    - We will be travelling from [2027-05-08](departure_date) to [2027-05-16](return_date)
+    - The vacation lasts from [2027-06-02](departure_date) to [2027-06-12](return_date)
+    - We are away from [2027-07-09](departure_date) to [2027-07-18](return_date)
+    - Departure on [2027-04-17](departure_date), return on [2027-04-24](return_date)
+    - Departure on [2027-05-16](departure_date), return on [2027-05-23](return_date)
+    - From [2027-06-12](departure_date) to [2027-06-20](return_date)
+    - From [2027-07-18](departure_date) to [2027-07-25](return_date)
 
 - intent: inform_budget
   examples: |
@@ -145,6 +173,22 @@ nlu:
     - EUR [1200](budget)
     - [500](budget)
     - [1000](budget)
+    - My maximum holiday allowance is [420](budget) euros
+    - I have allocated [950](budget) euros for the whole journey
+    - My overall spending cap is [720](budget) euros
+    - I have saved [1100](budget) euros for this holiday
+    - The entire trip must cost less than [1400](budget) euros
+    - I can afford [680](budget) euros altogether
+    - Please keep the holiday within [900](budget) euros
+    - My travel fund contains [1250](budget) euros
+    - I have earmarked [560](budget) euros for travel
+    - My available funds are [780](budget) euros
+    - The budget for everything is [1350](budget) euros
+    - My total allowance is [625.50](budget) euros
+    - I can spend up to [460](budget) euros altogether
+    - My total spending allowance is [920](budget) euros
+    - I have a maximum of [1150](budget) euros available
+    - We can spend [730](budget) euros on the entire holiday
 
 - intent: prefer_environment
   examples: |

@@ -95,7 +95,6 @@ def main():
             "attribution": {
                 "map": "© OpenStreetMap contributors",
                 "map_url": "https://www.openstreetmap.org/copyright",
-                "description": "Wikipedia; see article URL in description",
             },
             "limitations": [
                 "A limited sample around the geocoded city centre.",
@@ -106,11 +105,15 @@ def main():
             "sections": {},
         }
 
+    # Migrate older caches to the map-only destination guide.
+    data.get("sections", {}).pop("description", None)
+    data.get("attribution", {}).pop("description", None)
+    save_cache(data)
+
     geocoder = load_example("01_geocode_place.py")
     hotels = load_example("02_find_hotels.py")
     transport = load_example("03_find_transport.py")
     attractions = load_example("04_find_attractions.py")
-    descriptions = load_example("05_place_description.py")
 
     location = fetch_section(
         data,
@@ -151,13 +154,6 @@ def main():
         lambda: attractions.find_attractions(
             latitude, longitude, radius_m=2000, limit=8
         ),
-    )
-
-    fetch_section(
-        data,
-        "description",
-        "Wikipedia",
-        lambda: descriptions.describe("Berlin", sentences=2),
     )
 
     print(f"\nCache saved to: {CACHE_FILE}")

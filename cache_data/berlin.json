@@ -5,8 +5,7 @@
   "data_mode": "cached_external_data",
   "attribution": {
     "map": "© OpenStreetMap contributors",
-    "map_url": "https://www.openstreetmap.org/copyright",
-    "description": "Wikipedia; see article URL in description"
+    "map_url": "https://www.openstreetmap.org/copyright"
   },
   "limitations": [
     "A limited sample around the geocoded city centre.",
@@ -321,17 +320,6 @@
           "lon": 13.3924292
         }
       ]
-    },
-    "description": {
-      "status": "ok",
-      "fetched_at_utc": "2026-10-05T20:22:49.486317+00:00",
-      "source": "Wikipedia",
-      "data": {
-        "title": "Berlin",
-        "description": "Capital and largest city of Germany",
-        "summary": "Berlin is the capital and largest city of Germany. With 3.7 million inhabitants, it has the highest population within its city limits of any city in the European Union (EU).",
-        "url": "https://en.wikipedia.org/wiki/Berlin"
-      }
     }
   }
 }

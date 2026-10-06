@@ -878,17 +878,6 @@ class ActionDestinationInfo(Action):
             )
         )
 
-        description = section_value("description", dict)
-        if description:
-            dispatcher.utter_message(
-                text=(
-                    f"{description.get('summary', '')}\n"
-                    f"Source: Wikipedia — {description.get('url', '')}\n"
-                    f"Retrieved: {cached_date('description')} UTC. "
-                    "Text reused under Wikipedia's CC BY-SA terms."
-                )
-            )
-
         groups = [
             ("hotels", "Mapped hotels", 3),
             ("transport_stops", "Public transport access points", 5),

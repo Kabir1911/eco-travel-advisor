@@ -1,0 +1,10 @@
+[
+  {
+    "text": "Give greater importance to sustainability",
+    "intent": "prefer_environment",
+    "intent_prediction": {
+      "name": "prefer_balanced",
+      "confidence": 0.9161515831947327
+    }
+  }
+]

@@ -1,0 +1,61 @@
+[
+  {
+    "text": "Please use the dates from 2027-01-14 to 2027-01-20",
+    "entities": [
+      {
+        "start": 26,
+        "end": 36,
+        "value": "2027-01-14",
+        "entity": "departure_date"
+      },
+      {
+        "start": 40,
+        "end": 50,
+        "value": "2027-01-20",
+        "entity": "return_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "return_date",
+        "start": 26,
+        "end": 36,
+        "confidence_entity": 0.3948080241680145,
+        "value": "2027-01-14",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "departure_date",
+        "start": 40,
+        "end": 50,
+        "confidence_entity": 0.38778218626976013,
+        "value": "2027-01-20",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "My spending limit for the entire holiday is 650 euros",
+    "entities": [
+      {
+        "start": 44,
+        "end": 47,
+        "value": "650",
+        "entity": "budget"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I have set aside 850 euros for this trip",
+    "entities": [
+      {
+        "start": 17,
+        "end": 20,
+        "value": "850",
+        "entity": "budget"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

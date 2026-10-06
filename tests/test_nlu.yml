@@ -1,0 +1,75 @@
+version: "3.1"
+
+nlu:
+  - intent: plan_trip
+    examples: |
+      - Could you organise a greener getaway for me?
+      - Help me put together an environmentally conscious holiday
+      - I need assistance planning a sustainable break
+
+  - intent: inform_destination
+    examples: |
+      - The city I have chosen is [Berlin](destination)
+      - I would love to spend my holiday in [Paris](destination)
+      - My chosen holiday destination is [Rome](destination)
+
+  - intent: inform_origin
+    examples: |
+      - My journey will begin in [Frankfurt](origin)
+      - I will be setting off from [Munich](origin)
+      - My starting point is [Hamburg](origin)
+
+  - intent: inform_travel_dates
+    examples: |
+      - My holiday runs from [2026-11-12](departure_date) to [2026-11-18](return_date)
+      - I am travelling from [2026-12-03](departure_date) to [2026-12-09](return_date)
+      - Please use the dates from [2027-01-14](departure_date) to [2027-01-20](return_date)
+
+  - intent: inform_budget
+    examples: |
+      - My spending limit for the entire holiday is [650](budget) euros
+      - I have set aside [850](budget) euros for this trip
+      - I can spend a total of [350](budget) euros
+
+  - intent: prefer_environment
+    examples: |
+      - Reducing emissions is my main priority
+      - I care more about environmental impact than the price
+      - Give greater importance to sustainability
+
+  - intent: prefer_balanced
+    examples: |
+      - Give equal importance to cost and environmental impact
+      - I want a compromise between affordability and sustainability
+      - Please balance the price against the emissions
+
+  - intent: prefer_price
+    examples: |
+      - Keeping the cost down matters most to me
+      - My main priority is spending as little as possible
+      - Give greater importance to the cheapest price
+
+  - intent: show_hotels
+    examples: |
+      - Can you display the accommodation choices?
+      - Which places could I stay at?
+      - Let me compare the available hotels
+
+  - intent: show_transport
+    examples: |
+      - Can you display my transport choices?
+      - Let me compare ways of getting there
+      - What travel options are available for this route?
+
+  - intent: request_human
+    examples: |
+      - Could a real travel advisor help me with this?
+      - Please let me talk to a person about my holiday
+      - I would prefer assistance from a human agent
+
+  - intent: calculate_train_emissions
+    examples: |
+      - Calculate train emissions for 275 km
+      - Train emissions for 620 km
+      - Calculate train emissions for 145 km
+      

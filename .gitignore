@@ -1,0 +1,27 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Frontend dependencies
+node_modules/
+
+# Training cache and large models
+.rasa/
+models/
+
+# Backups and update installer
+ui_backups/
+EcoTravel_UI_Update/
+*.bak
+*.zip
+
+# Local editor and system files
+.vscode/
+.DS_Store
+Thumbs.db

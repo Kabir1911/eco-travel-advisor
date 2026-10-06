@@ -1,0 +1,10 @@
+version: "3.1"
+
+nlu:
+  - intent: ask_destination
+    examples: |
+      - Which destinations are available?
+      - Show supported cities
+      - What demonstration destinations can I choose?
+      - List the available destinations
+      - Show the destination buttons

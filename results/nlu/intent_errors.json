@@ -1,0 +1,26 @@
+[
+  {
+    "text": "The city I have chosen is Berlin",
+    "intent": "inform_destination",
+    "intent_prediction": {
+      "name": "inform_origin",
+      "confidence": 0.420617938041687
+    }
+  },
+  {
+    "text": "Give greater importance to sustainability",
+    "intent": "prefer_environment",
+    "intent_prediction": {
+      "name": "prefer_balanced",
+      "confidence": 0.8548546433448792
+    }
+  },
+  {
+    "text": "Please balance the price against the emissions",
+    "intent": "prefer_balanced",
+    "intent_prediction": {
+      "name": "prefer_price",
+      "confidence": 0.4323785901069641
+    }
+  }
+]

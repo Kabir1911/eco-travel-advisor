@@ -1,0 +1,337 @@
+{
+  "schema_version": 1,
+  "destination": "Berlin",
+  "country": "Germany",
+  "data_mode": "cached_external_data",
+  "attribution": {
+    "map": "© OpenStreetMap contributors",
+    "map_url": "https://www.openstreetmap.org/copyright",
+    "description": "Wikipedia; see article URL in description"
+  },
+  "limitations": [
+    "A limited sample around the geocoded city centre.",
+    "No live prices, booking availability or timetables.",
+    "Map eco tags are unverified, not proof of certification.",
+    "Station counts do not establish service quality."
+  ],
+  "sections": {
+    "location": {
+      "status": "ok",
+      "fetched_at_utc": "2026-10-05T20:22:29.617800+00:00",
+      "source": "Nominatim / OpenStreetMap",
+      "data": [
+        52.5173885,
+        13.3951309,
+        "Berlin, Deutschland"
+      ]
+    },
+    "hotels": {
+      "status": "ok",
+      "fetched_at_utc": "2026-10-05T20:22:32.072065+00:00",
+      "source": "Overpass / OpenStreetMap",
+      "data": [
+        {
+          "name": "Park Plaza Wallstreet",
+          "stars": "4",
+          "eco": null,
+          "lat": 52.5114646,
+          "lon": 13.4078027
+        },
+        {
+          "name": "Living Hotel Großer Kurfürst",
+          "stars": "4",
+          "eco": null,
+          "lat": 52.5122494,
+          "lon": 13.4087883
+        },
+        {
+          "name": "art’otel Berlin Mitte",
+          "stars": null,
+          "eco": null,
+          "lat": 52.5125444,
+          "lon": 13.4103351
+        },
+        {
+          "name": "Living Hotel Berlin-Mitte",
+          "stars": "4",
+          "eco": null,
+          "lat": 52.5120824,
+          "lon": 13.4082495
+        },
+        {
+          "name": "Radisson Collection Hotel Berlin",
+          "stars": null,
+          "eco": null,
+          "lat": 52.5195175,
+          "lon": 13.4028297
+        },
+        {
+          "name": "Novotel Berlin Mitte",
+          "stars": null,
+          "eco": null,
+          "lat": 52.5131672,
+          "lon": 13.4051935
+        },
+        {
+          "name": "Hotel Neuer Fritz Berlin",
+          "stars": "3",
+          "eco": null,
+          "lat": 52.5226997,
+          "lon": 13.3882776
+        },
+        {
+          "name": "Meliá Berlin",
+          "stars": "4",
+          "eco": null,
+          "lat": 52.5213429,
+          "lon": 13.388468
+        },
+        {
+          "name": "NH Collection",
+          "stars": "4S",
+          "eco": null,
+          "lat": 52.5195761,
+          "lon": 13.3888965
+        },
+        {
+          "name": "Maritim proArte Hotel Berlin",
+          "stars": null,
+          "eco": null,
+          "lat": 52.5182281,
+          "lon": 13.3874995
+        }
+      ]
+    },
+    "transport_stops": {
+      "status": "ok",
+      "fetched_at_utc": "2026-10-05T20:23:38.017757+00:00",
+      "source": "Overpass / OpenStreetMap",
+      "data": [
+        {
+          "name": "Spandauer Straße/Marienkirche",
+          "type": "tram_stop",
+          "lat": 52.5204243,
+          "lon": 13.4042441
+        },
+        {
+          "name": "S+U Friedrichstraße",
+          "type": "tram_stop",
+          "lat": 52.5192799,
+          "lon": 13.3884008
+        },
+        {
+          "name": "Am Kupfergraben",
+          "type": "tram_stop",
+          "lat": 52.5194258,
+          "lon": 13.3953708
+        },
+        {
+          "name": "Spittelmarkt",
+          "type": "subway_entrance",
+          "lat": 52.5112738,
+          "lon": 13.4051162
+        },
+        {
+          "name": "Spittelmarkt",
+          "type": "subway_entrance",
+          "lat": 52.5113683,
+          "lon": 13.4023621
+        },
+        {
+          "name": "Berlin Friedrichstraße",
+          "type": "station",
+          "lat": 52.5201744,
+          "lon": 13.3869884
+        },
+        {
+          "name": "S+U Brandenburger Tor",
+          "type": "subway_entrance",
+          "lat": 52.5166861,
+          "lon": 13.3803928
+        },
+        {
+          "name": "S+U Brandenburger Tor",
+          "type": "subway_entrance",
+          "lat": 52.5162486,
+          "lon": 13.3805206
+        },
+        {
+          "name": "Friedrichstraße",
+          "type": "subway_entrance",
+          "lat": 52.52089,
+          "lon": 13.3882557
+        },
+        {
+          "name": "Friedrichstraße",
+          "type": "subway_entrance",
+          "lat": 52.5209827,
+          "lon": 13.3879372
+        },
+        {
+          "name": "S+U Friedrichstraße",
+          "type": "subway_entrance",
+          "lat": 52.5198589,
+          "lon": 13.3875854
+        },
+        {
+          "name": "Friedrichstraße",
+          "type": "subway_entrance",
+          "lat": 52.5195747,
+          "lon": 13.3885542
+        },
+        {
+          "name": "Monbijouplatz",
+          "type": "tram_stop",
+          "lat": 52.5238986,
+          "lon": 13.3970747
+        },
+        {
+          "name": "U Oranienburger Tor",
+          "type": "tram_stop",
+          "lat": 52.5242398,
+          "lon": 13.3876293
+        },
+        {
+          "name": "S Hackescher Markt",
+          "type": "tram_stop",
+          "lat": 52.5216604,
+          "lon": 13.4026759
+        },
+        {
+          "name": "S Hackescher Markt",
+          "type": "tram_stop",
+          "lat": 52.5226155,
+          "lon": 13.4034101
+        },
+        {
+          "name": "Monbijouplatz",
+          "type": "tram_stop",
+          "lat": 52.5237138,
+          "lon": 13.3986649
+        },
+        {
+          "name": "S Hackescher Markt",
+          "type": "tram_stop",
+          "lat": 52.5238354,
+          "lon": 13.402603
+        },
+        {
+          "name": "S Oranienburger Straße",
+          "type": "tram_stop",
+          "lat": 52.5250979,
+          "lon": 13.3923646
+        },
+        {
+          "name": "Georgenstraße/Am Kupfergraben",
+          "type": "tram_stop",
+          "lat": 52.5203082,
+          "lon": 13.3936919
+        },
+        {
+          "name": "Oranienburger Straße",
+          "type": "subway_entrance",
+          "lat": 52.5249775,
+          "lon": 13.3924777
+        },
+        {
+          "name": "Oranienburger Straße",
+          "type": "subway_entrance",
+          "lat": 52.5251586,
+          "lon": 13.392582
+        },
+        {
+          "name": "S+U Friedrichstraße",
+          "type": "tram_stop",
+          "lat": 52.5195634,
+          "lon": 13.3884019
+        },
+        {
+          "name": "S Oranienburger Straße",
+          "type": "tram_stop",
+          "lat": 52.5251144,
+          "lon": 13.3924023
+        },
+        {
+          "name": "Friedrichstraße",
+          "type": "subway_entrance",
+          "lat": 52.5197213,
+          "lon": 13.3854297
+        }
+      ]
+    },
+    "attractions": {
+      "status": "ok",
+      "fetched_at_utc": "2026-10-05T20:22:48.045268+00:00",
+      "source": "Overpass / OpenStreetMap",
+      "data": [
+        {
+          "name": "Dokumentationszentrum Flucht, Vertreibung, Versöhnung",
+          "kind": "museum",
+          "type": "node",
+          "lat": 52.5048708,
+          "lon": 13.3822143
+        },
+        {
+          "name": "Museum für Kommunikation",
+          "kind": "museum",
+          "type": "node",
+          "lat": 52.5099308,
+          "lon": 13.3872552
+        },
+        {
+          "name": "Deutschlandmuseum",
+          "kind": "museum",
+          "type": "node",
+          "lat": 52.5087884,
+          "lon": 13.378434
+        },
+        {
+          "name": "Mori-Ôgai-Gedenkstätte",
+          "kind": "museum",
+          "type": "node",
+          "lat": 52.5219182,
+          "lon": 13.3799981
+        },
+        {
+          "name": "Die Mauer | The Wall",
+          "kind": "museum",
+          "type": "node",
+          "lat": 52.5093664,
+          "lon": 13.3797713
+        },
+        {
+          "name": "Museum für Naturkunde",
+          "kind": "museum",
+          "type": "node",
+          "lat": 52.5304903,
+          "lon": 13.3791152
+        },
+        {
+          "name": "Galgenhaus Stadtmuseum Berlin",
+          "kind": "museum",
+          "type": "node",
+          "lat": 52.5143734,
+          "lon": 13.4024859
+        },
+        {
+          "name": "Hugenottenmuseum Berlin",
+          "kind": "museum",
+          "type": "node",
+          "lat": 52.514289,
+          "lon": 13.3924292
+        }
+      ]
+    },
+    "description": {
+      "status": "ok",
+      "fetched_at_utc": "2026-10-05T20:22:49.486317+00:00",
+      "source": "Wikipedia",
+      "data": {
+        "title": "Berlin",
+        "description": "Capital and largest city of Germany",
+        "summary": "Berlin is the capital and largest city of Germany. With 3.7 million inhabitants, it has the highest population within its city limits of any city in the European Union (EU).",
+        "url": "https://en.wikipedia.org/wiki/Berlin"
+      }
+    }
+  }
+}

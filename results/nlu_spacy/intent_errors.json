@@ -1,0 +1,34 @@
+[
+  {
+    "text": "Could you organise a greener getaway for me?",
+    "intent": "plan_trip",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.39272764325141907
+    }
+  },
+  {
+    "text": "Give greater importance to sustainability",
+    "intent": "prefer_environment",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.658882200717926
+    }
+  },
+  {
+    "text": "Please balance the price against the emissions",
+    "intent": "prefer_balanced",
+    "intent_prediction": {
+      "name": "prefer_price",
+      "confidence": 0.5879409313201904
+    }
+  },
+  {
+    "text": "Give greater importance to the cheapest price",
+    "intent": "prefer_price",
+    "intent_prediction": {
+      "name": "prefer_balanced",
+      "confidence": 0.6200306415557861
+    }
+  }
+]

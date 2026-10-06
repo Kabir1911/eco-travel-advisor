@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0",
+  "data_mode": "mock",
+  "disclaimer": "Fictional demonstration data for a university project. Prices and availability are not live. No bookings can be made.",
+  "currency": "EUR",
+  "supported_destinations": [
+    "Berlin"
+  ],
+  "hotels": [
+    {
+      "id": "hotel_berlin_001",
+      "name": "Demo Green Stay",
+      "city": "Berlin",
+      "price_per_room_per_night": 65,
+      "room_capacity": 1,
+      "near_public_transport": true,
+      "sustainability_features": [
+        "Reported renewable electricity use",
+        "Refillable toiletries",
+        "Water-saving fixtures"
+      ],
+      "sustainability_score": 0.9,
+      "score_basis": "Illustrative project score from 0 to 1; not independently verified.",
+      "certification_status": "Unverified mock property",
+      "availability_status": "Simulated; dates are not checked",
+      "is_mock": true
+    },
+    {
+      "id": "hotel_berlin_002",
+      "name": "Demo Central Rooms",
+      "city": "Berlin",
+      "price_per_room_per_night": 45,
+      "room_capacity": 1,
+      "near_public_transport": true,
+      "sustainability_features": [
+        "Reported recycling facilities",
+        "Optional towel reuse"
+      ],
+      "sustainability_score": 0.6,
+      "score_basis": "Illustrative project score from 0 to 1; not independently verified.",
+      "certification_status": "Unverified mock property",
+      "availability_status": "Simulated; dates are not checked",
+      "is_mock": true
+    },
+    {
+      "id": "hotel_berlin_003",
+      "name": "Demo Budget Lodge",
+      "city": "Berlin",
+      "price_per_room_per_night": 30,
+      "room_capacity": 1,
+      "near_public_transport": false,
+      "sustainability_features": [
+        "Reported towel reuse"
+      ],
+      "sustainability_score": 0.3,
+      "score_basis": "Illustrative project score from 0 to 1; not independently verified.",
+      "certification_status": "Unverified mock property",
+      "availability_status": "Simulated; dates are not checked",
+      "is_mock": true
+    }
+  ],
+  "transport_options": [
+    {
+      "id": "transport_fra_ber_train",
+      "provider": "Demo Rail",
+      "mode": "train",
+      "origin": "Frankfurt",
+      "destination": "Berlin",
+      "price_per_person_one_way": 55,
+      "distance_km_one_way": 550,
+      "duration_minutes_one_way": 255,
+      "distance_basis": "Illustrative route distance; not verified against a routing service.",
+      "availability_status": "Simulated; dates are not checked",
+      "carbon_estimate_kg_co2e": null,
+      "is_mock": true
+    },
+    {
+      "id": "transport_fra_ber_coach",
+      "provider": "Demo Coach",
+      "mode": "coach",
+      "origin": "Frankfurt",
+      "destination": "Berlin",
+      "price_per_person_one_way": 25,
+      "distance_km_one_way": 570,
+      "duration_minutes_one_way": 480,
+      "distance_basis": "Illustrative route distance; not verified against a routing service.",
+      "availability_status": "Simulated; dates are not checked",
+      "carbon_estimate_kg_co2e": null,
+      "is_mock": true
+    },
+    {
+      "id": "transport_fra_ber_flight",
+      "provider": "Demo Air",
+      "mode": "flight",
+      "origin": "Frankfurt",
+      "destination": "Berlin",
+      "origin_airport": "FRA",
+      "destination_airport": "BER",
+      "price_per_person_one_way": 95,
+      "distance_km_one_way": 430,
+      "duration_minutes_one_way": 70,
+      "distance_basis": "Illustrative flight distance; not verified against a routing service.",
+      "duration_note": "Flight time only; excludes airport transfers, check-in and security.",
+      "price_note": "Excludes optional baggage and airport transfers.",
+      "availability_status": "Simulated; dates are not checked",
+      "carbon_estimate_kg_co2e": null,
+      "is_mock": true
+    }
+  ],
+  "activities": [
+    {
+      "id": "activity_berlin_001",
+      "name": "Demo neighbourhood walking tour",
+      "city": "Berlin",
+      "price_per_person": 15,
+      "duration_minutes": 120,
+      "description": "Fictional locally guided cultural walking tour.",
+      "availability_status": "Simulated; dates are not checked",
+      "is_mock": true
+    },
+    {
+      "id": "activity_berlin_002",
+      "name": "Demo community food workshop",
+      "city": "Berlin",
+      "price_per_person": 30,
+      "duration_minutes": 150,
+      "description": "Fictional workshop featuring local food and community stories.",
+      "availability_status": "Simulated; dates are not checked",
+      "is_mock": true
+    }
+  ]
+}

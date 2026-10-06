@@ -1,0 +1,119 @@
+[
+  {
+    "text": "My holiday runs from 2026-11-12 to 2026-11-18",
+    "entities": [
+      {
+        "start": 21,
+        "end": 31,
+        "value": "2026-11-12",
+        "entity": "departure_date"
+      },
+      {
+        "start": 35,
+        "end": 45,
+        "value": "2026-11-18",
+        "entity": "return_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "departure_date",
+        "start": 21,
+        "end": 31,
+        "confidence_entity": 0.803276777267456,
+        "value": "2026-11-12",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "departure_date",
+        "start": 35,
+        "end": 45,
+        "confidence_entity": 0.772813081741333,
+        "value": "2026-11-18",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I am travelling from 2026-12-03 to 2026-12-09",
+    "entities": [
+      {
+        "start": 21,
+        "end": 31,
+        "value": "2026-12-03",
+        "entity": "departure_date"
+      },
+      {
+        "start": 35,
+        "end": 45,
+        "value": "2026-12-09",
+        "entity": "return_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "departure_date",
+        "start": 21,
+        "end": 31,
+        "confidence_entity": 0.4766796827316284,
+        "value": "2026-12-03",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "departure_date",
+        "start": 35,
+        "end": 45,
+        "confidence_entity": 0.4114852249622345,
+        "value": "2026-12-09",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Please use the dates from 2027-01-14 to 2027-01-20",
+    "entities": [
+      {
+        "start": 26,
+        "end": 36,
+        "value": "2027-01-14",
+        "entity": "departure_date"
+      },
+      {
+        "start": 40,
+        "end": 50,
+        "value": "2027-01-20",
+        "entity": "return_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "departure_date",
+        "start": 26,
+        "end": 36,
+        "confidence_entity": 0.6259562969207764,
+        "value": "2027-01-14",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "departure_date",
+        "start": 40,
+        "end": 50,
+        "confidence_entity": 0.6289857625961304,
+        "value": "2027-01-20",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I can spend a total of 350 euros",
+    "entities": [
+      {
+        "start": 23,
+        "end": 26,
+        "value": "350",
+        "entity": "budget"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

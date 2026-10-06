@@ -1,0 +1,7 @@
+version: "3.1"
+
+rules:
+  - rule: Offer demonstration destinations
+    steps:
+      - intent: ask_destination
+      - action: action_ask_destination

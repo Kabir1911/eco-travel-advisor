@@ -1,0 +1,47 @@
+services:
+  actions:
+    build:
+      context: .
+      dockerfile: Dockerfile.actions
+    environment:
+      CLIMATIQ_API_KEY: "${CLIMATIQ_API_KEY:?Add your key to the root .env file}"
+
+  rasa:
+    image: rasa/rasa:3.6.21-spacy-en
+    ports:
+      - "127.0.0.1:5005:5005"
+    volumes:
+      - ./models:/app/models:ro
+      - ./credentials.yml:/app/credentials.yml:ro
+      - ./endpoints.docker.yml:/app/endpoints.docker.yml:ro
+    command:
+      - run
+      - --interface
+      - "0.0.0.0"
+      - --port
+      - "5005"
+      - --model
+      - /app/models/eco-api-features.tar.gz
+      - --credentials
+      - /app/credentials.yml
+      - --endpoints
+      - /app/endpoints.docker.yml
+      - --cors
+      - "http://localhost:8000"
+    depends_on:
+      - actions
+
+  frontend:
+    image: python:3.10-slim
+    working_dir: /site
+    volumes:
+      - ./frontend:/site:ro
+    ports:
+      - "127.0.0.1:8000:8000"
+    command:
+      - python
+      - -m
+      - http.server
+      - "8000"
+      - --bind
+      - "0.0.0.0"

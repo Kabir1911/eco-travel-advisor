@@ -1,0 +1,284 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: plan_trip
+  examples: |
+    - I want to plan a trip
+    - Help me plan an eco-friendly holiday
+    - I want to travel sustainably
+    - Can you help me organise a vacation?
+    - I am planning a holiday
+    - Recommend a sustainable trip
+    - I need help planning my travel
+    - Let's plan a green holiday
+    - I want an environmentally friendly vacation
+    - Help me find sustainable travel options
+    
+- intent: inform_destination
+  examples: |
+    - I want to visit [Berlin](destination)
+    - I would like to travel to [Paris](destination)
+    - My destination is [Amsterdam](destination)
+    - I am going to [London](destination)
+    - Let's visit [Rome](destination)
+    - I want to explore [Barcelona](destination)
+    - [Berlin](destination)
+    - [Paris](destination)
+    - [Amsterdam](destination)
+    - [London](destination)
+    - [Rome](destination)
+    - [Barcelona](destination)
+    - My selected destination is [Berlin](destination)
+    - The city I want to visit is [Paris](destination)
+    - I have picked [Rome](destination) as my holiday destination
+    - My trip will end in [Amsterdam](destination)
+
+- intent: inform_travel_dates
+  examples: |
+    - I will travel from [2026-11-10](departure_date) to [2026-11-15](return_date)
+    - My departure date is [2026-12-01](departure_date) and my return date is [2026-12-08](return_date)
+    - Leaving on [2027-01-05](departure_date) and returning on [2027-01-12](return_date)
+    - From [2026-11-20](departure_date) to [2026-11-25](return_date)
+    - Departing [2027-02-10](departure_date), returning [2027-02-17](return_date)
+    - I leave on [2026-12-15](departure_date)
+    - My departure date is [2027-03-01](departure_date)
+    - I return on [2026-12-22](return_date)
+    - My return date is [2027-03-08](return_date)
+
+- intent: inform_budget
+  examples: |
+    - My budget is [500](budget) euros
+    - I can spend [1000](budget) euros
+    - My total trip budget is [1500](budget) euros
+    - I have [800](budget) euros for the trip
+    - Around [600](budget) euros
+    - No more than [2000](budget) euros
+    - [750](budget) euros
+    - EUR [1200](budget)
+    - [500](budget)
+    - [1000](budget)
+
+- intent: prefer_environment
+  examples: |
+    - The lowest environmental impact
+    - I want the greenest options
+    - Reducing emissions matters most
+    - Prioritise sustainability
+    - Environment first
+    - I prefer low-carbon travel
+    - Put sustainability first when comparing options
+    - Environmental impact should carry the most weight
+    - Prioritise lower emissions even if it costs more
+    - Price is less important to me than sustainability
+
+- intent: prefer_balanced
+  examples: |
+    - A balance of cost and sustainability
+    - Balance price and environmental impact
+    - I want affordable sustainable options
+    - Both cost and sustainability matter
+    - A balanced approach
+    - Something reasonably priced and eco-friendly
+    - Price and emissions should have the same importance
+    - Consider both affordability and environmental impact equally
+    - Neither cost nor sustainability should dominate
+    - Find a middle ground between cheaper travel and lower emissions
+
+- intent: prefer_price
+  examples: |
+    - The lowest price
+    - My priority is saving money
+    - Show me the cheapest options
+    - Price matters most
+    - Keep costs as low as possible
+    - I prefer the most affordable trip
+    - Put price first when comparing options
+    - Cost should carry the most weight
+    - Prioritise cheaper travel even if emissions are higher
+    - Sustainability is less important to me than affordability
+
+- intent: request_human
+  examples: |
+    - I want to speak to a human
+    - Connect me to a travel advisor
+    - I need a human agent
+    - Can someone help me personally?
+    - Please transfer me to a person
+    - My itinerary is too complicated
+    - I need expert help with my trip
+    - Can I talk to a travel specialist?
+    - Please arrange a human handover
+    - I want personalised help from an advisor
+
+- intent: calculate_train_emissions
+  examples: |
+    - Calculate train emissions for 100 km
+    - Calculate train emissions for 250 km
+    - Calculate train emissions for 500 km
+    - Calculate train emissions for 75.5 km
+    - Train emissions for 120 km
+    - Train emissions for 600 km
+    - Calculate train emissions for 0 km
+    - Calculate train emissions for 1000 km
+
+- intent: show_hotels
+  examples: |
+    - Show me hotels
+    - Find accommodation
+    - What hotels are available?
+    - Show hotel options
+    - Where can I stay?
+    - I need a hotel
+    - Compare accommodation prices
+    - Show me places to stay
+
+- intent: inform_origin
+  examples: |
+    - I am travelling from [Frankfurt](origin)
+    - My starting city is [Frankfurt](origin)
+    - I will depart from [Frankfurt](origin)
+    - Start my trip in [Frankfurt](origin)
+    - My origin is [Munich](origin)
+    - I am travelling from [Hamburg](origin)
+    - My starting city is [Paris](origin)
+    - I will depart from [London](origin)
+    - My departure city is [Frankfurt](origin)
+    - The city I am leaving from is [Hamburg](origin)
+    - My trip will start in [Munich](origin)
+    - I will begin my journey in [London](origin)
+
+- intent: show_transport
+  examples: |
+    - Show transport options
+    - Compare trains coaches and flights
+    - How can I get there?
+    - Show me flights
+    - Find transport for my trip
+    - What trains are available?
+    - Show coach options
+    - Compare travel prices
+
+- intent: destination_info
+  examples: |
+    - Tell me about my destination
+    - Show destination information
+    - Give me a guide to the city
+    - What cultural places can I visit?
+    - Show real places near the city centre
+    - What stations are near the city centre?
+    - Show the cached city guide
+    - Tell me about local attractions
+
+- intent: show_weather
+  examples: |
+    - What is the weather at my destination?
+    - Show the weather forecast
+    - Will it rain in the next three days?
+    - What is the temperature there?
+    - Show current weather conditions
+    - Is it raining there now?
+    - Give me the weather outlook
+    - How windy is it there?
+
+- intent: convert_budget
+  examples: |
+    - Convert my budget to INR
+    - Show my euro budget in Indian rupees
+    - How much is my budget in GBP?
+    - Convert my saved budget to British pounds
+    - Show my budget in USD
+    - What is my budget in US dollars?
+    - Change the display currency
+    - Convert my budget
+    - Show the equivalent in rupees
+    - Show the equivalent in pounds
+    - Show the equivalent in dollars
+    - Help me convert currencies

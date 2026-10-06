@@ -1,0 +1,119 @@
+version: "3.1"
+stories:
+- story: Identify the assistant (/app/tests/test_stories.yml)
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+- story: Complete balanced trip and browse options (/app/tests/test_stories.yml)
+  steps:
+  - intent: plan_trip
+  - action: utter_greet
+  - intent: inform_destination
+    entities:
+    - destination: Berlin
+  - slot_was_set:
+    - destination: Berlin
+  - slot_was_set:
+    - destination: Berlin
+  - action: utter_ask_travel_dates
+  - intent: inform_travel_dates
+  - action: action_collect_travel_dates
+  - slot_was_set:
+    - departure_date: '2026-11-10'
+  - slot_was_set:
+    - return_date: '2026-11-15'
+  - intent: inform_budget
+    entities:
+    - budget: '500'
+  - slot_was_set:
+    - budget: '500'
+  - slot_was_set:
+    - budget: '500'
+  - action: utter_ask_sustainability
+  - intent: prefer_balanced
+  - slot_was_set:
+    - sustainability_preference: balance of cost and sustainability
+  - action: utter_trip_summary
+  - action: action_travel_advice
+  - intent: show_hotels
+  - action: action_show_hotels
+  - intent: inform_origin
+    entities:
+    - origin: Frankfurt
+  - slot_was_set:
+    - origin: Frankfurt
+  - slot_was_set:
+    - origin: Frankfurt
+  - action: action_show_transport
+  - intent: request_human
+  - action: action_human_handover
+- story: Request transport before giving a starting city (/app/tests/test_stories.yml)
+  steps:
+  - intent: show_transport
+  - action: action_show_transport
+  - intent: inform_origin
+    entities:
+    - origin: Frankfurt
+  - slot_was_set:
+    - origin: Frankfurt
+  - slot_was_set:
+    - origin: Frankfurt
+  - action: action_show_transport
+  - intent: inform_destination
+    entities:
+    - destination: Berlin
+  - slot_was_set:
+    - destination: Berlin
+  - slot_was_set:
+    - destination: Berlin
+  - action: utter_ask_travel_dates
+  - intent: show_transport
+  - action: action_show_transport
+- story: Change sustainability preference (/app/tests/test_stories.yml)
+  steps:
+  - intent: prefer_environment
+  - slot_was_set:
+    - sustainability_preference: lowest environmental impact
+  - action: utter_trip_summary
+  - action: action_travel_advice
+  - intent: prefer_price
+  - slot_was_set:
+    - sustainability_preference: lowest price
+  - action: utter_trip_summary
+  - action: action_travel_advice
+  - intent: show_transport
+  - action: action_show_transport
+- story: Repeated fallback routes to custom fallback action (/app/tests/test_stories.yml)
+  steps:
+  - intent: nlu_fallback
+  - action: action_default_fallback
+  - intent: nlu_fallback
+  - action: action_default_fallback
+  - intent: nlu_fallback
+  - action: action_default_fallback
+- story: Recover from fallback with an understood request (/app/tests/test_stories.yml)
+  steps:
+  - intent: nlu_fallback
+  - action: action_default_fallback
+  - intent: plan_trip
+  - action: utter_greet
+  - intent: nlu_fallback
+  - action: action_default_fallback
+- story: Request advisor directly (/app/tests/test_stories.yml)
+  steps:
+  - intent: request_human
+  - action: action_human_handover
+- story: Request carbon calculation (/app/tests/test_stories.yml)
+  steps:
+  - intent: calculate_train_emissions
+  - action: action_calculate_train_emissions
+- story: Request hotels before providing details (/app/tests/test_stories.yml)
+  steps:
+  - intent: show_hotels
+  - action: action_show_hotels
+- story: End a travel conversation (/app/tests/test_stories.yml)
+  steps:
+  - intent: plan_trip
+  - action: utter_greet
+  - intent: goodbye
+  - action: utter_goodbye

@@ -1,0 +1,138 @@
+version: "3.1"
+
+intents:
+  - ask_destination
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - plan_trip
+  - inform_destination
+  - inform_travel_dates
+  - inform_budget
+  - prefer_environment
+  - prefer_balanced
+  - prefer_price
+  - request_human
+  - nlu_fallback
+  - calculate_train_emissions
+  - show_hotels
+  - inform_origin
+  - show_transport
+  - destination_info
+  - show_weather
+  - convert_budget
+
+entities:
+  - destination
+  - departure_date
+  - return_date
+  - budget
+  - origin
+
+slots:
+  destination:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: destination
+
+  origin:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: origin
+
+  departure_date:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  return_date:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+  
+  budget:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  sustainability_preference:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_intent
+        intent: prefer_environment
+        value: "lowest environmental impact"
+      - type: from_intent
+        intent: prefer_balanced
+        value: "balance of cost and sustainability"
+      - type: from_intent
+        intent: prefer_price
+        value: "lowest price"
+
+responses:
+  utter_default:
+    - text: "I did not understand that clearly. Please rephrase your message, or choose an option below."
+      buttons:
+        - title: "Plan a trip"
+          payload: "/plan_trip"
+        - title: "Request an advisor"
+          payload: "/request_human"
+
+  utter_greet:
+    - text: "Hello! I am your Eco-Travel Advisor. I can help you plan a sustainable trip. Where would you like to travel?"
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_happy:
+    - text: "Great, carry on!"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+
+  utter_ask_travel_dates:
+    - text: "You would like to visit {destination}. What are your departure and return dates? Please use YYYY-MM-DD."
+
+  utter_ask_budget:
+    - text: "Your travel dates are {departure_date} to {return_date}. What is your total trip budget in euros?"
+
+  utter_ask_sustainability:
+    - text: "Your total trip budget is {budget} euros. What matters most to you: the lowest environmental impact, a balance of cost and sustainability, or the lowest price?"
+
+  utter_trip_summary:
+    - text: "Here is your trip summary:\nDestination: {destination}\nDeparture: {departure_date}\nReturn: {return_date}\nTotal budget: {budget} euros\nPriority: {sustainability_preference}"
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+  - action_travel_advice
+  - action_collect_travel_dates
+  - action_human_handover
+  - action_default_fallback
+  - action_calculate_train_emissions
+  - action_show_hotels
+  - action_show_transport
+  - action_collect_budget
+  - action_destination_info
+  - action_show_weather
+  - action_convert_budget
+  - action_ask_destination

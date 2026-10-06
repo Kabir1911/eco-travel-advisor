@@ -1,0 +1,95 @@
+version: "3.1"
+
+rules:
+  - rule: Say goodbye whenever the user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Say I am a bot when challenged
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+
+  - rule: Start planning a sustainable trip
+    steps:
+      - intent: plan_trip
+      - action: utter_greet
+
+  - rule: Ask for dates after receiving a destination
+    steps:
+      - intent: inform_destination
+      - action: utter_ask_travel_dates
+
+  - rule: Ask for budget after receiving travel dates
+    steps:
+      - intent: inform_travel_dates
+      - action: action_collect_travel_dates
+
+  - rule: Collect budget and ask for sustainability preference
+    steps:
+      - intent: inform_budget
+      - action: action_collect_budget
+
+  - rule: Summarise an environment-first trip
+    steps:
+      - intent: prefer_environment
+      - action: utter_trip_summary
+      - action: action_travel_advice
+
+  - rule: Summarise a balanced trip
+    steps:
+      - intent: prefer_balanced
+      - action: utter_trip_summary
+      - action: action_travel_advice
+
+  - rule: Summarise a price-first trip
+    steps:
+      - intent: prefer_price
+      - action: utter_trip_summary
+      - action: action_travel_advice
+
+  - rule: Prepare human advisor handover
+    steps:
+      - intent: request_human
+      - action: action_human_handover
+
+  - rule: Clarify a message with low confidence
+    steps:
+      - intent: nlu_fallback
+      - action: action_default_fallback
+
+  - rule: Calculate train carbon emissions
+    steps:
+      - intent: calculate_train_emissions
+      - action: action_calculate_train_emissions
+
+  - rule: Show accommodation options
+    steps:
+      - intent: show_hotels
+      - action: action_show_hotels
+
+  - rule: Show transport when requested
+    steps:
+      - intent: show_transport
+      - action: action_show_transport
+
+  - rule: Show transport after receiving the starting city
+    steps:
+      - intent: inform_origin
+      - action: action_show_transport
+
+  - rule: Show cached destination information
+    steps:
+      - intent: destination_info
+      - action: action_destination_info
+
+  - rule: Show destination weather
+    steps:
+      - intent: show_weather
+      - action: action_show_weather
+
+  - rule: Convert saved euro budget
+    steps:
+      - intent: convert_budget
+      - action: action_convert_budget

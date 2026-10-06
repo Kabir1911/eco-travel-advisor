@@ -1,0 +1,16 @@
+FROM python:3.10-slim
+
+WORKDIR /app
+
+RUN pip install --no-cache-dir \
+    rasa-sdk==3.6.2 \
+    python-dotenv==1.2.4 \
+    requests==2.34.2
+
+COPY actions/ /app/actions/
+COPY mock_data/ /app/mock_data/
+COPY cache_data/ /app/cache_data/
+
+EXPOSE 5055
+
+CMD ["python", "-m", "rasa_sdk", "--actions", "actions", "--port", "5055"]

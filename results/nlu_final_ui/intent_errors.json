@@ -1,0 +1,18 @@
+[
+  {
+    "text": "Let me compare ways of getting there",
+    "intent": "show_transport",
+    "intent_prediction": {
+      "name": "show_weather",
+      "confidence": 0.18959999084472656
+    }
+  },
+  {
+    "text": "What travel options are available for this route?",
+    "intent": "show_transport",
+    "intent_prediction": {
+      "name": "ask_destination",
+      "confidence": 0.41007381677627563
+    }
+  }
+]
